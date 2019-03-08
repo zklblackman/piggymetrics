@@ -1,4 +1,4 @@
-FROM java:8-jre
+FROM 2h3po24q.mirror.aliyuncs.com/openjdk:8-jre
 MAINTAINER Alexander Lukyanchikov <sqshq@sqshq.com>
 
 ADD ./target/config.jar /app/
