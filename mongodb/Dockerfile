@@ -1,4 +1,4 @@
-FROM mongo:3
+FROM 2h3po24q.mirror.aliyuncs.com/library/mongo:3
 MAINTAINER Alexander Lukyanchikov <sqshq@sqshq.com>
 
 ADD init.sh /init.sh

@@ -1,4 +1,4 @@
-FROM java:8-jre
+FROM 2h3po24q.mirror.aliyuncs.com/library/java:8-jre
 MAINTAINER Chi Dov <d.chiproeng@gmail.com>
 
 ADD ./target/turbine-stream-service.jar /app/
