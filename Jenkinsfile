@@ -14,39 +14,39 @@ pipeline {
       steps {
           withCredentials([usernamePassword(credentialsId: 'docker-login', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USER')]) {
             sh 'docker build -t zhangkanglong/demo:account-service ./account-service/'
-            sh 'docker login --username=$DOCKER_USER --password=$DOCKER_PASSWORD'
+            sh 'docker login --username=zhangkanglong --password=$DOCKER_PASSWORD'
             sh 'docker push zhangkanglong/demo:account-service'
 
             sh 'docker build -t zhangkanglong/demo:auth-service ./auth-service/'
-            sh 'docker login --username=$DOCKER_USER --password=$DOCKER_PASSWORD'
+            sh 'docker login --username=zhangkanglong --password=$DOCKER_PASSWORD'
             sh 'docker push zhangkanglong/demo:auth-service'
 
             sh 'docker build -t zhangkanglong/demo:config ./config/'
-            sh 'docker login --username=$DOCKER_USER --password=$DOCKER_PASSWORD'
+            sh 'docker login --username=zhangkanglong --password=$DOCKER_PASSWORD'
             sh 'docker push zhangkanglong/demo:config'
 
             sh 'docker build -t zhangkanglong/demo:gateway ./gateway/'
-            sh 'docker login --username=$DOCKER_USER --password=$DOCKER_PASSWORD'
+            sh 'docker login --username=zhangkanglong --password=$DOCKER_PASSWORD'
             sh 'docker push zhangkanglong/demo:gateway'
 
             sh 'docker build -t zhangkanglong/demo:monitoring ./monitoring/'
-            sh 'docker login --username=$DOCKER_USER --password=$DOCKER_PASSWORD'
+            sh 'docker login --username=zhangkanglong --password=$DOCKER_PASSWORD'
             sh 'docker push zhangkanglong/demo:monitoring'
 
             sh 'docker build -t zhangkanglong/demo:notification-service ./notification-service/'
-            sh 'docker login --username=$DOCKER_USER --password=$DOCKER_PASSWORD'
+            sh 'docker login --username=zhangkanglong --password=$DOCKER_PASSWORD'
             sh 'docker push zhangkanglong/demo:notification-service'
 
             sh 'docker build -t zhangkanglong/demo:registry ./registry/'
-            sh 'docker login --username=$DOCKER_USER --password=$DOCKER_PASSWORD'
+            sh 'docker login --username=zhangkanglong --password=$DOCKER_PASSWORD'
             sh 'docker push zhangkanglong/demo:registry'
 
             sh 'docker build -t zhangkanglong/demo:statistics-service ./statistics-service/'
-            sh 'docker login --username=$DOCKER_USER --password=$DOCKER_PASSWORD'
+            sh 'docker login --username=zhangkanglong --password=$DOCKER_PASSWORD'
             sh 'docker push zhangkanglong/demo:statistics-service'
 
             sh 'docker build -t zhangkanglong/demo:turbine-stream-service ./turbine-stream-service/'
-            sh 'docker login --username=$DOCKER_USER --password=$DOCKER_PASSWORD'
+            sh 'docker login --username=zhangkanglong --password=$DOCKER_PASSWORD'
             sh 'docker push zhangkanglong/demo:turbine-stream-service'
             }
           }
